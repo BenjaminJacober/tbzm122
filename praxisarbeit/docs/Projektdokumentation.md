@@ -9,13 +9,23 @@ Anhand der Analyse wurde folgendes Lösungsdesign entworfen.
 
 TODO: schreiben sie wie die Skripte aufgerufen werden sollen (d.h. welche Parameter werden übergeben, gibt es Interaktionen mit dem Skript, läuft es automatisch täglich ab?)
 
+Werden von User aufgerufen: 
+
+./createUser.sh --inputFile xyz.txt --password "MySecurePassword" --createGroup
+
+./createCronBackup --amountOfBackups n --command xyz
+
+Programm ruft selber auf:
+
+./backup.sh --config someConfig.yml -o dir/dir/outputFileName --groupName xyz --excludeList exclude.yml
+
 ### Ablauf der Automation
 
-TODO: Hier kommt ihr UML-Activity Diagramm
+[activityDiagram.pdf](https://github.com/BenjaminJacober/tbzm122/files/8740801/activityDiagram.pdf)
 
 ### Konfigurationsdateien
 
-TODO: Definieren sie welche Parameter in welchen Konfigurationsdateien gespeichert werden.
+
 
 ## Abgrenzungen zum Lösungsdesign
 
