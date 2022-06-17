@@ -26,7 +26,7 @@ if [ -d "$DIR" ]; then
     # Create new backup
     userHome="/home/$userDir"
     echo $userHome
-    cp -r userHome temp
+    cp -r $userHome temp
     cd temp
     for file in *; do
       rm specified.txt
