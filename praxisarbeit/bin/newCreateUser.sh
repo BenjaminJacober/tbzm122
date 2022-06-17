@@ -17,9 +17,9 @@ echo "createGroup: $c"
 a=1
 while read ln; do
 
-  userName;
-  group;
-  names;
+  userName="";
+  group="";
+  names="";
 
   cat $ln | grep -v '^#' | grep -v '^$' | while read user group2 names2; do
     userName=$user
