@@ -24,7 +24,7 @@ cat $i | grep -v '^#' | grep -v '^$' | while read user group names; do # Check i
     echo "group does not exist"
     if [ $c ]; then
       sudo groupadd $group
-      sudo  -a -G $group $user
+      sudo useradd -g $group $user
     else
       echo "There is no group $c and createGroup flag is not set. No userName was created"
     fi
