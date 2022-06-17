@@ -32,7 +32,7 @@ if [ -d "$DIR" ]; then
       rm specified.txt
     done
 
-    tar -c archiveName
+#    tar -c archiveName
 
     cd $DIR
     cd $g
