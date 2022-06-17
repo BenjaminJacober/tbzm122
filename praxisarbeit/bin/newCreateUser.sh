@@ -16,10 +16,13 @@ echo "createGroup: $c"
 # Reading File
 a=1
 while read ln; do
+  lineArray=[];
+  IFS=' ' read -ra lineArray <<< "ln";
+
   # Get names
-  userName=${ln[0]}
-  group=${ln[1]}
-  names=${ln[2]}
+  userName=${lineArray[0]}
+  group=${lineArray[1]}
+  names=${lineArray[2]}
 
   # Check if group exists
   if grep -q $group /etc/group; then
