@@ -17,21 +17,21 @@ echo "createGroup: $c"
 a=1
 while read ln; do
   # Get names
-  user=${ln[0]}
-  group=${ln[1]}
-  names=${ln[2]}
+  userName=ln[0]
+  group=ln[1]
+  names=ln[2]
 
   # Check if group exists
   if grep -q $group /etc/group; then
     echo "group exists"
-    sudo usermod -a -G $group $user
+    sudo usermod -a -G $group $userName
   else
     echo "group does not exist"
     if [ $c ]; then
           sudo groupadd $group
-          sudo usermod -a -G $group $user
+          sudo usermod -a -G $group $userName
     else
-      echo "There is no group $c and createGroup flag is not set. No user was created"
+      echo "There is no group $c and createGroup flag is not set. No userName was created"
     fi
   fi
 
