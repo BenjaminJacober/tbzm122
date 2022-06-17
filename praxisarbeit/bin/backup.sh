@@ -7,14 +7,14 @@ while getopts c:o:g:e flag; do
   esac
 done
 
-DIR="/home/benjaminjacober/Documents/GitHub/tbzm122/praxisarbeit/backups"
+DIR="/home/dodo/Documents/GitHub/tbzm122/praxisarbeit/backups"
 if [ -d "$DIR" ]; then
   echo "Going into group directory: $g"
+  cd $DIR
+  cd $g
   for userDir in *; do
     # Go into user group
     echo "Going into user directory: $userDir"
-    cd $DIR
-    cd $g
     cd $userDir
 
     # Delete old files
@@ -32,7 +32,10 @@ if [ -d "$DIR" ]; then
       rm specified.txt
     done
 
-#    tar -c archiveName
+    tar -c archiveName
+
+    cd $DIR
+    cd $g
 
   done
 
