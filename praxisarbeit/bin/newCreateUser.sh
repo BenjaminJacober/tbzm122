@@ -17,11 +17,9 @@ echo "createGroup: $c"
 a=1
 while read ln; do
   # Get names
-  lineArray=($ln)
-  user=${lineArray[0]}
-  group=${lineArray[1]}
-  firstName=${lineArray[2]}
-  lastName=${lineArray[3]}
+  user=${ln[0]}
+  group=${ln[1]}
+  names=${ln[2]}
 
   # Check if group exists
   if grep -q $group /etc/group; then
