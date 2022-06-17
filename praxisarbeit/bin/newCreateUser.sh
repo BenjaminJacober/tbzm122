@@ -15,33 +15,24 @@ echo "createGroup: $c"
 
 # Reading File
 a=1
-while read ln; do
-
-  userName="";
-  group="";
-  names="";
-
-  cat $ln | grep -v '^#' | grep -v '^$' | while read user group2 names2; do
-    userName=$user
-    group=$group2
-    names=$names2
-  done
-
-  # Check if group2 exists
+#while read ln; do
+cat $i | grep -v '^#' | grep -v '^$' | while read user group names; do # Check if group2 exists
   if grep -q $group2 /etc/group2; then
     echo "group2 exists"
-    sudo usermod -a -G $group2 $userName
+    sudo usermod -a -G $group $user
   else
     echo "group2 does not exist"
     if [ $c ]; then
-      sudo groupadd $group2
-      sudo usermod -a -G $group2 $userName
+      sudo groupadd $group
+      sudo usermod -a -G $group $user
     else
       echo "There is no group2 $c and createGroup flag is not set. No userName was created"
     fi
   fi
 
-  a=$((a + 1))
-done <$i
+done
+
+#  a=$((a + 1))
+#done <$i
 
 echo "$fileArray"
