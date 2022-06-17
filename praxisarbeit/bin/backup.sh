@@ -29,10 +29,11 @@ if [ -d "$DIR" ]; then
     cp -r $userHome temp
     cd temp
     for file in *; do
+      pwd
       rm specified.txt
     done
 
-#    tar -c archiveName
+#    tar -c archiveName -X specified.txt
 
     cd $DIR
     cd $g
