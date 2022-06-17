@@ -17,9 +17,9 @@ echo "createGroup: $c"
 a=1
 while read ln; do
   # Get names
-  userName=ln[0]
-  group=ln[1]
-  names=ln[2]
+  userName=${ln[0]}
+  group=${ln[1]}
+  names=${ln[2]}
 
   # Check if group exists
   if grep -q $group /etc/group; then
