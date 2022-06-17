@@ -9,13 +9,12 @@ done
 
 DIR="/home/benjaminjacober/Documents/GitHub/tbzm122/praxisarbeit/backups"
 if [ -d "$DIR" ]; then
-  # Take action if $DIR exists. #
-  cd $DIR
   echo "Going into group directory: $g"
-  cd $g
   for userDir in *; do
     # Go into user group
     echo "Going into user directory: $userDir"
+    cd $DIR
+    cd $g
     cd $userDir
 
     # Delete old files
@@ -25,15 +24,16 @@ if [ -d "$DIR" ]; then
     done
 
     # Create new backup
-    userHome="/home/$userDir/*"
+    userHome="/home/$userDir"
+    echo userHome
     cp -r userHome temp
     cd temp
     for file in *; do
       rm specified.txt
     done
 
-    cd $DIR
-    cd $g
+#    tar -c archiveName
+
   done
 
 else
