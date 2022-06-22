@@ -16,6 +16,7 @@ if [ -d "$DIR" ]; then
 
   # Create dir if doesn't exists
   if [ -d "$cwd/../backups/$g" ]; then
+    echo "Ignore this"
   else
     mkdir "$cwd/../backups/$g"
   fi
