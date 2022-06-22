@@ -21,7 +21,7 @@ if [ -d "$DIR" ]; then
 
     # Delete old files
     # Going into user backup directory
-    cd $g
+    cd $userDir
 
     for file in $(ls -t | tail -n +$a+1); do
       echo "Deleting file: $file"
@@ -29,11 +29,7 @@ if [ -d "$DIR" ]; then
     done
 
     # Create new backup
-    # Go into user home directory
-    echo "Going into user directory: $userDir"
-    cd $DIR$userDir
     userHome="/home/$userDir"
-
     echo "Creating tar"
     tar -czvf "$cwd/../backups/$g/$o.$(date '+%Y-%m-%d').$userDir.tar.gz" $userHome
 
