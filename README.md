@@ -19,16 +19,16 @@ Skript zum automatischen erstellen von Unix-Usern und zum default passwort setze
 <username> <groupname> <vorname nachname>
 ```
 
-* Es soll überprüfen ob die Gruppe eine der Gruppen ist, die im Skript 2 auch gesichert werden. Ansonsten soll eine Warnung ausgegeben werden, dass das User-Home nicht gesichert wird.
+*_ Es soll überprüfen ob die Gruppe eine der Gruppen ist, die im Skript 2 auch gesichert werden. Ansonsten soll eine Warnung ausgegeben werden, dass das User-Home nicht gesichert wird.
 * Es soll prüfen, ob die Gruppe mit dem `<groupname>` existiert, falls nicht eine Warnung ausgeben und nichts tun.
 * Es soll ein konfigurierbares default passwort setzen, welches beim ersten login geändert werden muss.
-* Es soll je nach Gruppe anhand einer Gruppenspezifischen Skeleton-Template-Umgebung das User-Home-Verzeichnis einrichten.
+*_ Es soll je nach Gruppe anhand einer Gruppenspezifischen Skeleton-Template-Umgebung das User-Home-Verzeichnis einrichten.
 * Es soll eine Warnung ausgeben, falls der User schon existiert und nichts weiter tun.
 
 #### Kann-Kriterien
 * Es soll eine neue Gruppe anlegen falls die Gruppe noch nicht existiert.
-* Falls der User existiert und das User-Home-Verzeichnis nicht, soll es mit der richtigen Skeleton-Template-Umgebung erstellt werden.
-* Es soll ein Logfile mit einem einheitlichen Format geschrieben werden.
+*_ Falls der User existiert und das User-Home-Verzeichnis nicht, soll es mit der richtigen Skeleton-Template-Umgebung erstellt werden.
+*_ Es soll ein Logfile mit einem einheitlichen Format geschrieben werden.
 * ...
 
 ### Skript 2 
@@ -44,14 +44,14 @@ Backup von allen User-Homes welche bestimmten Gruppen zugeordnet sind. Es sollen
 	```
 * Es soll überprüft werden ob die zu sicherende Gruppe existiert. Ansonsten soll eine Warnung ausgegeben werden.
 * Es soll frei konfigurierbar sein, wieviele Backups aufbewahrt werden sollen.
-* Es soll frei konfigurierbar sein, in welchem Verzeichnis die Backups gespeichert werden sollen.
+*_ Es soll frei konfigurierbar sein, in welchem Verzeichnis die Backups gespeichert werden sollen.
 * Es soll frei konfigurierbar sein, wie die Backup files heissen sollen, d.h. das Prefix des Filenamens soll frei wählbar sein.
 * Es soll nur ein tar-Archive pro Backup von allen User-Home-Verzeichnissen zusammen erstellt werden. (D.h. alle User-Home-Verzeichnisse in einem tar file)
 
 #### Kann-Kriterien
 * Es soll möglich sein in jedem User-Home-Verzeichnis, gewisse Verzeichnisse mit samt Inhalt von der Sicherung auszunehmen, d.h. nicht zu sicheren. 
-* Es soll ein Logfile mit einem einheitlichen Format geschrieben werden.
-* ...
+*_ Es soll ein Logfile mit einem einheitlichen Format geschrieben werden.
+* _...
 
 
 ## Vorgehen
