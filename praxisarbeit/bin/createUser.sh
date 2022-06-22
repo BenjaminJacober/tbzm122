@@ -15,10 +15,10 @@ echo "createGroup: $c"
 
 addNewUser() {
   if id "$1" &>/dev/null; then
-    echo 'User already exists, no new user could be created'
-  else
     echo 'New user was created'
     sudo useradd -g $group -m -p $2 $1
+  else
+    echo 'User already exists, no new user could be created'
   fi
 }
 
