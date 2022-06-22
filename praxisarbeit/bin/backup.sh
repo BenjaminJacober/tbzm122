@@ -3,7 +3,6 @@ while getopts g:e:a:c flag; do
   g) g=${OPTARG} ;;
   e) e=${OPTARG} ;;
   a) a=${OPTARG} ;;
-  c) c=${OPTARG} ;;
   esac
 done
 
