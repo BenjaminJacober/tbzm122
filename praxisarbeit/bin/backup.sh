@@ -31,7 +31,7 @@ if [ -d "$DIR" ]; then
     # Create new backup
     userHome="/home/$userDir"
     echo "Creating tar"
-    tar -czvf "$cwd/../backups/$g/$o.$(date '+%Y-%m-%d').$userDir.tar.gz" $userHome
+    tar -czvf "$cwd/../backups/$g/$userDir/$o.$(date '+%Y-%m-%d').$userDir.tar.gz" $userHome
 
   done
 
