@@ -1,5 +1,5 @@
 # Reading input parameters
-while getopts a:c: flag; do
+while getopts c: flag; do
   case "${flag}" in
   c) c=${OPTARG} ;;
   esac
