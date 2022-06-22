@@ -9,7 +9,7 @@ done
 
 echo "amountOfBackups: $a"
 
-DIR="../backups"
+DIR="/home/"
 if [ -d "$DIR" ]; then
   echo "Going into group directory: $g"
   cd $DIR
