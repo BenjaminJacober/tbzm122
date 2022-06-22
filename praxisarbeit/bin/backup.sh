@@ -3,6 +3,7 @@ while getopts g:e:a:c flag; do
   g) g=${OPTARG} ;;
   e) e=${OPTARG} ;;
   a) a=${OPTARG} ;;
+  o) o=${OPTARG} ;;
   esac
 done
 
@@ -35,7 +36,7 @@ if [ -d "$DIR" ]; then
     done
 
     echo "Creating tar"
-    tar -czvf "$(date '+%Y-%m-%d').$userDir.tar.gz" $userHome
+    tar -czvf "$o.$(date '+%Y-%m-%d').$userDir.tar.gz" $userHome
 
     cd $DIR
     cd $g
