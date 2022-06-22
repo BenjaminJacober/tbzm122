@@ -7,25 +7,31 @@ while getopts g:e:a:c flag; do
   esac
 done
 
+echo "If this script doesn't work install members (sudo apt install members | or similar)"
 echo "amountOfBackups: $a"
 
+cwd=pwd
 DIR="/home/"
 if [ -d "$DIR" ]; then
-  echo "Going into group directory: $g"
-  cd $DIR
-  cd $g
-  for userDir in *; do
-    # Go into user group
-    echo "Going into user directory: $userDir"
-    cd $userDir
+
+  # Going into group backup directory
+  cd "$cwd/../backups/$g"
+
+  for userDir in members $g; do
 
     # Delete old files
+    # Going into user backup directory
+    cd $g
+
     for file in $(ls -t | tail -n +$a+1); do
       echo "Deleting file: $file"
       rm "$file"
     done
 
     # Create new backup
+    # Go into user home directory
+    echo "Going into user directory: $userDir"
+    cd $DIR$userDir
     userHome="/home/$userDir"
     echo $userHome
     cp -r $userHome temp
@@ -36,10 +42,7 @@ if [ -d "$DIR" ]; then
     done
 
     echo "Creating tar"
-    tar -czvf "$o.$(date '+%Y-%m-%d').$userDir.tar.gz" $userHome
-
-    cd $DIR
-    cd $g
+    tar -czvf "$cwd/../backups/$g/$o.$(date '+%Y-%m-%d').$userDir.tar.gz" $userHome
 
   done
 
