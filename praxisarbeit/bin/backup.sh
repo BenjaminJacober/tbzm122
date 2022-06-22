@@ -26,6 +26,13 @@ if [ -d "$DIR" ]; then
 
   for userDir in `members $g`; do
 
+    # Create dir if doesn't exists
+    if [ -d "$cwd/../backups/$g/$userDir" ]; then
+      echo "Ignore this"
+    else
+      mkdir "$cwd/../backups/$g/$userDir"
+    fi
+
     # Delete old files
     # Going into user backup directory
     cd $userDir
@@ -37,6 +44,7 @@ if [ -d "$DIR" ]; then
 
     # Create new backup
     userHome="/home/$userDir"
+
     echo "Creating tar"
     if [ $o ]; then
       tar -czvf "$cwd/../backups/$g/$userDir/$o.$(date '+%Y-%m-%d').$userDir.tar.gz" $userHome
