@@ -1,8 +1,9 @@
-while getopts g:e:a flag; do
+while getopts g:e:a:c flag; do
   case "${flag}" in
   g) g=${OPTARG} ;;
   e) e=${OPTARG} ;;
   a) a=${OPTARG} ;;
+  c) c=${OPTARG} ;;
   esac
 done
 
