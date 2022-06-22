@@ -15,6 +15,7 @@ DIR="/home/"
 if [ -d "$DIR" ]; then
 
   # Going into group backup directory
+
   cd "$cwd/../backups/$g"
 
   for userDir in `members $g`; do
@@ -31,7 +32,11 @@ if [ -d "$DIR" ]; then
     # Create new backup
     userHome="/home/$userDir"
     echo "Creating tar"
-    tar -czvf "$cwd/../backups/$g/$userDir/$o.$(date '+%Y-%m-%d').$userDir.tar.gz" $userHome
+    if [ $o ]; then
+      tar -czvf "$cwd/../backups/$g/$userDir/$o.$(date '+%Y-%m-%d').$userDir.tar.gz" $userHome
+    else
+      tar -czvf "$cwd/../backups/$g/$userDir/$(date '+%Y-%m-%d').$userDir.tar.gz" $userHome
+    fi
 
   done
 
