@@ -10,7 +10,7 @@ done
 echo "If this script doesn't work install members (sudo apt install members | or similar)"
 echo "amountOfBackups: $a"
 
-a2=$a+1
+let (a+=1)
 
 cwd=`pwd`
 DIR="/home/"
@@ -39,7 +39,7 @@ if [ -d "$DIR" ]; then
     # Going into user backup directory
     cd $userDir
 
-    for file in $(ls -t | tail -n +$a2); do
+    for file in $(ls -t | tail -n +$a); do
       echo "Deleting file: $file"
       rm "$file"
     done
