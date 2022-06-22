@@ -33,13 +33,6 @@ if [ -d "$DIR" ]; then
     echo "Going into user directory: $userDir"
     cd $DIR$userDir
     userHome="/home/$userDir"
-    echo $userHome
-    cp -r $userHome temp
-    cd temp
-    for file in *; do
-      pwd
-      rm specified.txt
-    done
 
     echo "Creating tar"
     tar -czvf "$cwd/../backups/$g/$o.$(date '+%Y-%m-%d').$userDir.tar.gz" $userHome
