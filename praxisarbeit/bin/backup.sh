@@ -17,7 +17,7 @@ if [ -d "$DIR" ]; then
   # Going into group backup directory
   cd "$cwd/../backups/$g"
 
-  for userDir in members $g; do
+  for userDir in `members $g`; do
 
     # Delete old files
     # Going into user backup directory
