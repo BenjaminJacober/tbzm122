@@ -2,13 +2,12 @@
 [[_TOC_]]
 ## Einführungstext 
 
-TODO: In 2-3 Sätzen beschreiben was die Skripte grundsaetzlich tun.
-
+In einer Firma möchte man ganz einfach neue Mitarbeiter auf einem System erfassen können. Dazu möchte der Unix-Verantwortliche ein Skript haben welches aufgrund des Inhalts einer Datei neue User erfasst und deren Unix-Umgebung (Home-Directory) einrichtet und ein Backup-Skript welches die Home-Directories der User sichert.
 ## Installationsanleitung für Administratoren
 
 ### Installation
 
-TODO: Wie ist das Skript zu installieren. (z.B. apt-get install ... oder tar xvf .... oder ...)
+git clone our repo
 
 ### Konfiguration
 

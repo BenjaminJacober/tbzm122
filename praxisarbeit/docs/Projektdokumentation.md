@@ -3,21 +3,20 @@
 [[_TOC_]]
 
 ## Lösungsdesign
-Anhand der Analyse wurde folgendes Lösungsdesign entworfen.
+
+[activityDiagram.pdf](https://github.com/BenjaminJacober/tbzm122/files/8740801/activityDiagram.pdf)
 
 ### Aufruf der Skripte
 
-TODO: schreiben sie wie die Skripte aufgerufen werden sollen (d.h. welche Parameter werden übergeben, gibt es Interaktionen mit dem Skript, läuft es automatisch täglich ab?)
-
 Werden von User aufgerufen: 
 
-./createUser.sh --inputFile xyz.txt --password "MySecurePassword" --createGroup
+./createUser.sh -i xyz.txt -p "MySecurePassword" -c
 
-./createCronBackup --amountOfBackups n --command xyz
+./createCronBackup -c command
 
-Programm ruft selber auf:
+Cronjob ruft selber auf:
 
-./backup.sh -a amountOfBackups -o dir/dir/outputFileName -g xyz -e excludeList
+./backup.sh -a amountOfBackups -o dir/dir/outputFileName -g groupName -e excludeList
 
 ### Ablauf der Automation
 
@@ -25,8 +24,8 @@ Programm ruft selber auf:
 
 ### Konfigurationsdateien
 
-
+userInputFile.txt und createCronJob.conf in ./etc
 
 ## Abgrenzungen zum Lösungsdesign
 
-TODO: Nachdem das Programm verwirklicht wurde, hier die Unterschiede von der Implementation zum Lösungsdesign beschreiben (was wurde anders gemacht, was wurde nicht gemacht, was wurde zusaetzlich gemacht)
+Einige Sachen haben wir nicht gemacht, andere schon.
