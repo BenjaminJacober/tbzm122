@@ -14,8 +14,13 @@ cwd=`pwd`
 DIR="/home/"
 if [ -d "$DIR" ]; then
 
-  # Going into group backup directory
+  # Create dir if doesn't exists
+  if [ -d "$cwd/../backups/$g" ]; then
+  else
+    mkdir "$cwd/../backups/$g"
+  fi
 
+  # Going into group backup directory
   cd "$cwd/../backups/$g"
 
   for userDir in `members $g`; do
