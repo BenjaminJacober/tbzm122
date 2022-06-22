@@ -13,7 +13,7 @@ cat ../etc/createCronJob.conf | grep -v '^#' | grep -v '^$' | while read group; 
   if grep -q $group /etc/group; then
     echo "Creating cron job"
     #echo new cron into cron file
-    echo "00 00 * 00 00 $command" >>mycron
+    echo "00 00 * 00 00 $c" >>mycron
     #install new cron file
     crontab mycron
     rm mycron
