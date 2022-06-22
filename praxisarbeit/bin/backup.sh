@@ -10,7 +10,7 @@ done
 echo "If this script doesn't work install members (sudo apt install members | or similar)"
 echo "amountOfBackups: $a"
 
-let (a+=1)
+let "a=a+1"
 
 cwd=`pwd`
 DIR="/home/"
