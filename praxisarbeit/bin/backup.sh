@@ -9,7 +9,7 @@ done
 
 echo "amountOfBackups: $a"
 
-DIR="/home/dodo/Documents/GitHub/tbzm122/praxisarbeit/backups"
+DIR="../backups"
 if [ -d "$DIR" ]; then
   echo "Going into group directory: $g"
   cd $DIR

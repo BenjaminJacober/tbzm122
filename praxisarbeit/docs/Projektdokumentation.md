@@ -17,7 +17,7 @@ Werden von User aufgerufen:
 
 Programm ruft selber auf:
 
-./backup.sh --config someConfig.yml -o dir/dir/outputFileName --groupName xyz --excludeList exclude.yml
+./backup.sh -a amountOfBackups -o dir/dir/outputFileName -g xyz -e excludeList
 
 ### Ablauf der Automation
 
