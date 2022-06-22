@@ -13,26 +13,30 @@ echo "inputFile: $i"
 echo "password: $p"
 echo "createGroup: $c"
 
+addNewUser() {
+  if id "$1" &>/dev/null; then
+    echo 'User already exists, no new user could be created'
+  else
+    echo 'New user was created'
+    sudo useradd -g $group -m -p $2 $1
+  fi
+}
+
 # Reading File
 a=1
-#while read ln; do
 cat $i | grep -v '^#' | grep -v '^$' | while read user group names; do # Check if group2 exists
   if grep -q $group /etc/group; then
-    echo "group exists"
-    sudo useradd -g $group $user
+    echo "Group exists"
+    addNewUser $user $password
   else
-    echo "group does not exist"
+    echo "Group does not exist"
     if [ $c ]; then
+      echo "Creating group"
       sudo groupadd $group
-      sudo useradd -g $group $user
+      addNewUser $user $password
     else
       echo "There is no group $c and createGroup flag is not set. No userName was created"
     fi
   fi
 
 done
-
-#  a=$((a + 1))
-#done <$i
-
-echo "$fileArray"

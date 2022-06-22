@@ -1,11 +1,12 @@
-while getopts c:o:g:e flag; do
+while getopts g:e:a flag; do
   case "${flag}" in
-  c) c=${OPTARG} ;;
-  o) o=${OPTARG} ;;
   g) g=${OPTARG} ;;
   e) e=${OPTARG} ;;
+  a) a=${OPTARG} ;;
   esac
 done
+
+echo "amountOfBackups: $a"
 
 DIR="/home/dodo/Documents/GitHub/tbzm122/praxisarbeit/backups"
 if [ -d "$DIR" ]; then
@@ -18,7 +19,7 @@ if [ -d "$DIR" ]; then
     cd $userDir
 
     # Delete old files
-    for file in $(ls -t | tail -n +11); do
+    for file in $(ls -t | tail -n +$a+1); do
       echo "Deleting file: $file"
       rm "$file"
     done
@@ -33,7 +34,8 @@ if [ -d "$DIR" ]; then
       rm specified.txt
     done
 
-#    tar -c archiveName -X specified.txt
+    echo "Creating tar"
+    tar -czvf "$(date '+%Y-%m-%d').$userDir.tar.gz" $userHome
 
     cd $DIR
     cd $g
