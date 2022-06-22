@@ -13,19 +13,7 @@ git clone our repo
 
 Konfigurationsfiles editieren, siehe example files in ./etc
 
-TODO: Wie ist ein allfaelliger Cronjob einzurichten
+So in etwa:
+./createCronJob.sh -c "./backup.sh -a 5"
 
-TODO: Wie sind User-Home-Templates einzurichten
-
-....
-
-## Bediensanleitung Benutzer
-
-TODO: Erzeugen der Input-Files beschreiben, falls noetig
-
-TODO: beschreiben des Scriptaufruf
-
-TODO: beschreiben der erzeugt files (falls solche erzeugt werden)
-
-TODO: Lokation von logfiles und bekannte Fehlermeldungen beschreiben.
-
+Es können keine User Templates eingerichtet werden, da wir das nicht gemacht haben.
