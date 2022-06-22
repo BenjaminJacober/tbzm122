@@ -58,12 +58,12 @@ Backup von allen User-Homes welche bestimmten Gruppen zugeordnet sind. Es sollen
 
 | Task | Beschreibung | Modus | zu bearbeitende Dokumente |
 | - | - | - | - |
-| Definition von User Interface | Definieren sie welche Argumente sie den Skripte übergeben werden und dokumentieren sie dies. | Teamarbeit | [Projektdokumenation](docs/Projektdokumentation.md) |
-| Activity Diagramm | Zeichnen sie für die beiden Skripts Activity-Diagramme | Teamarbeit |[Projektdokumenation](docs/Projektdokumentation.md) |
-| Definition von Konfigurationdateien | Definieren sie Konfigurationsdateien die beide Skripte benutzen sollen und dokumentieren sie diese. Definieren soweit bekannt die Konfigurationsparameter. Erstellen sie erste Sample-Konfigfiles. | Teamarbeit | [Projektdokumenation](docs/Projektdokumentation.md)<br>[Verzeichnes für Konfigfiles](etc) |
+| Definition von User Interface | Definieren sie welche Argumente sie den Skripte übergeben werden und dokumentieren sie dies. | Teamarbeit | [Projektdokumenation](Readme.md) |
+| Activity Diagramm | Zeichnen sie für die beiden Skripts Activity-Diagramme | Teamarbeit |[Projektdokumenation](Readme.md) |
+| Definition von Konfigurationdateien | Definieren sie Konfigurationsdateien die beide Skripte benutzen sollen und dokumentieren sie diese. Definieren soweit bekannt die Konfigurationsparameter. Erstellen sie erste Sample-Konfigfiles. | Teamarbeit | [Projektdokumenation](Readme.md)<br>[Verzeichnes für Konfigfiles](etc) |
 | Implementieren | Schreiben sie je eines der beiden Skript. Passen sie die Sample-Konfiguration Files an falls nötig | Einzelarbeit | [Verzeichnis für Skripts](bin)<br>[Verzeichnes für Konfigfiles](etc)|
-| Installationsanleitung | Machen sie eine Anleitung für den Administrator (Installation und Konfiguration des Skripts), d.h. alles was initial einmal gemacht werden muss | Einzelarbeit | [Betriebsdokumenation](docs/Betriebsdokumentation.md) |
-| Anwendungsanleitung | Machen sie eine Anleitung für den Administrator oder Benutzer des Skripts mit den wiederkehrenden Tasks | Einzelarbeit | [Betriebsdokumenation](docs/Betriebsdokumentation.md) |
+| Installationsanleitung | Machen sie eine Anleitung für den Administrator (Installation und Konfiguration des Skripts), d.h. alles was initial einmal gemacht werden muss | Einzelarbeit | [Betriebsdokumenation](dReadme.md) |
+| Anwendungsanleitung | Machen sie eine Anleitung für den Administrator oder Benutzer des Skripts mit den wiederkehrenden Tasks | Einzelarbeit | [Betriebsdokumenation](Readme.md) |
 
 
 
