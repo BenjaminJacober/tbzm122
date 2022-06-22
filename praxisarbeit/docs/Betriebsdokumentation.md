@@ -11,7 +11,7 @@ git clone our repo
 
 ### Konfiguration
 
-TODO: Beschreibung der Konfigurationsfiles (Beispiel-Files erstellen im Repo)
+Konfigurationsfiles editieren, siehe example files in ./etc
 
 TODO: Wie ist ein allfaelliger Cronjob einzurichten
 
